@@ -31,10 +31,10 @@ nav ul{
     width: 40%;
 }
 
-siteheader a{
+a.siteheader{
     text-decoration: none
 }
 
-siteheader a:visited{
+a:visited.siteheader{
     color: #006666;
 }
