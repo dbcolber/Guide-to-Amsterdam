@@ -3,6 +3,7 @@ body{
     font-family: 'Helvetica Neue';
     color: grey;
     font-size: 20px;
+    line-height: 1.25em;
 }
 
 body.index{
@@ -20,18 +21,30 @@ h1{
 }
 
 h2{
-    margin: 8px;
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 h2.title{
     font-family: 'Courier New', Courier, monospace;
     color: #006666;
     text-align: center;
+    margin-top: 10px;
+}
+
+h3{
+    color: #006666;
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 nav{
     text-align: center;
     display: block;
+    margin: 20px;
+    margin-top: 30px;
 }
 
 nav a{
@@ -97,9 +110,6 @@ pageheader{
     color: black;
 }
 
-h3{
-    color: #006666;
-}
 
 
 @media screen and (max-width:750px){
@@ -167,8 +177,8 @@ h3{
     }
 
     h2.title{
-        font-size: 40px;
-        margin: 5px;
+        font-size: 35px;
+        margin: 20px;
     }
 
     .flex-container{
