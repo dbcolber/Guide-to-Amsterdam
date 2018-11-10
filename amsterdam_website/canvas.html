@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Canvas HW</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <style>
+        canvas {
+            border: 4px solid lightgrey;
+            background-color: whitesmoke;
+        }
+
+        h1{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        body{
+            font-family:Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="800" height="500">
+    Your browser is unsupported, please try again in Google Chrome.
+    </canvas>
+
+<!-- JAVASCRIPT SOURCES -->
+<!-- MAIN Source 1: https://www.youtube.com/watch?v=XbS2bLMzcrk  -->
+<!-- Source 2: https://www.codicode.com/art/how_to_draw_on_a_html5_canvas_with_a_mouse.aspx -->
+<!-- Source 3: https://www.youtube.com/watch?v=qHXbeAb1JSA -->
+
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+
+
+        var mousedrag = true;
+        var radius = 10;
+
+        ctx.lineWidth = radius*2;
+        ctx.fillStyle = 'red';
+
+
+        var draw_canvas = function(item){
+            if(mousedrag){
+                ctx.lineTo(item.clientX,item.clientY)
+                ctx.beginPath();
+                ctx.arc(item.clientX,item.clientY,radius,0,Math.PI*2);
+                ctx.fill();
+                ctx.beginPath();
+                ctx.moveTo(item.clientX,item.clientY)
+            }
+        }
+
+        var start_drawing = function(item){
+            mousedrag = true;
+            draw_canvas(item);
+        }
+
+        var stop_drawing = function(){
+            mousedrag = false;
+        }
+
+        canvas.addEventListener('onmousedown', start_drawing)
+
+        canvas.addEventListener('mousemove', draw_canvas)
+
+        window.addEventListener('keyup', function(item){
+            if(item.keyCode == 38){
+                console.log("Increasing pen size")
+                if(radius<50){
+                    radius+=2;
+                }
+            }
+            
+            if(item.keyCode == 40){
+                console.log("Decreasing pen size")
+                if(radius>=4){
+                    radius -= 2;
+                }
+            }
+            
+            if(item.keyCode == 32){
+                console.log("Clearing canvas")
+                ctx.setTransform(1,0,0,1,0,0)
+                ctx.clearRect(0,0,this.canvas.width,this.canvas.height);
+            }
+            
+            if(item.keyCode == 66){
+                console.log("Changing pen color to blue")
+                ctx.fillStyle = 'blue';
+            }
+
+            if(item.keyCode == 71){
+                console.log("Changing pen color to green")
+                ctx.fillStyle = 'green';
+            }
+
+            if(item.keyCode == 82){
+                console.log("Changing pen color to red")
+                ctx.fillStyle = 'red';
+            }
+
+            if(item.keyCode == 89){
+                console.log("Changing pen color to yellow")
+                ctx.fillStyle = 'yellow';
+            }
+        })
+
+    </script>
+
+<h1>Move your mouse inside the canvas to start drawing!</h1>
+
+Press "B" to change the pen color to BLUE<br>
+Press "G" to change the pen color to GREEN<br>
+Press "Y" to change the pen color to YELLOW<br>
+Press "R" to change the pen color to RED<br>
+Press the UP arrow to increase the pen size<br>
+Press the DOWN arrow to make the pen size smaller<br>
+Press the SPACE BAR to clear the canvas
+
+</body>
+</html>
