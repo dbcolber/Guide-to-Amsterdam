@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<!-- SOURCES: https://demos.kunkalabs.com/mixitup/basic/ -->
+<!-- https://github.com/patrickkunka/mixitup/tree/v3/demos -->
+<!-- https://www.w3schools.com/css/css3_buttons.asp -->
+<!-- https://lokeshdhakar.com/projects/lightbox2/#getting-started -->
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/lightbox1.css">
+	<link rel="stylesheet" type="text/css" href="css/lightbox2.css">
+
+	
+	<title>Lightbox</title>
+</head>
+<body>
+
+	<main>
+
+	<h1>Images of Amsterdam</h1>
+
+	<h2>Filter by:</h2>
+
+	<div class="controls">
+		<button type="button" class="control mixitup-control-active" data-filter="all">All</button>
+		<button type="button" class="control" data-filter=".canal">Canals</button>
+		<button type="button" class="control" data-filter=".houses">Houses</button>
+		<button type="button" class="control" data-filter=".landmarks">Landmarks</button>
+	</div>
+
+	<div class = "gallery">
+		<a class="mix canal" href="images/canal_at_night.jpg" data-lightbox="amsterdam" data-title="Canal lit up at night"><img src="images/canal_at_night.jpg" alt="Canal lit up at night"></a>
+		<a class="mix houses" href="images/canal_houses.jpg" data-lightbox="amsterdam" data-title="Dutch homes along canal in Amsterdam"><img src="images/canal_houses.jpg" alt="Dutch homes along canal in Amsterdam"></a>
+		<a class="mix landmarks" href="images/ice_skating.jpg" data-lightbox="amsterdam" data-title="People ice skating outside the Rijksmuseum"><img src="images/ice_skating.jpg" alt="People ice skating outside the Rijksmuseum"></a>
+		<a class="mix canal" href="images/fall_canal.jpg" data-lightbox="amsterdam" data-title="Boats alongside a canal during autumn"><img src="images/fall_canal.jpg" alt="Boats alongside a canal during autumn"></a>
+		<a class="mix canal" href="images/yellow_bike.jpg" data-lightbox="amsterdam" data-title="A yellow bike parked on a canal bridge"><img src="images/yellow_bike.jpg" alt="A yellow bike parked on a canal bridge"></a>
+		<a class="mix canal landmarks" href="images/hotel_at_night.jpg" data-lightbox="amsterdam" data-title="Canal-front hotel at dusk"><img src="images/hotel_at_night.jpg" alt="Canal-front hotel at dusk"></a>
+		<a class="mix landmarks" href="images/rijks.jpg" data-lightbox="amsterdam" data-title="The Rijksmuseum during the summer"><img src="images/rijks.jpg" alt="The Rijksmuseum during the summer"></a>
+		<a class="mix houses" href="images/blue_houses.jpg" data-lightbox="amsterdam" data-title="Blue painted houses on the streets of Amsterdam"><img src="images/blue_houses.jpg" alt="Blue painted houses on the streets of Amsterdam"></a>
+		<a class="mix landmarks" href="images/anne_frank_house.jpg" data-lightbox="amsterdam" data-title="The exterior of the Anne Frank House"><img src="images/anne_frank_house.jpg" alt="The exterior of the Anne Frank House"></a>
+	</div>
+
+	</main>
+
+</body>
+
+<script src="js/lightbox.js"></script>
+<script src="js/mixitup.min.js"></script>
+<script>
+	var containerEL = document.querySelector('.gallery')
+	var mixer = mixitup(containerEL);
+</script>
+
+</html>
