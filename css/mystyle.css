@@ -1,8 +1,8 @@
 body{
     background-color: #ffffe6;
     font-family: 'Helvetica Neue';
-    color: grey;
-    font-size: 20px;
+    color: #4A4A4A;
+    font-size: 18px;
     line-height: 1.25em;
 }
 
@@ -50,7 +50,7 @@ nav{
 }
 
 nav a{
-    color:grey;
+    color:#4A4A4A;
     text-decoration: none;
     font-size: 16px;
 
@@ -66,12 +66,9 @@ nav ul{
     padding-inline-start: 0px;
 }
 
-a.siteheader{
-    text-decoration: none
-}
 
 a:visited.siteheader{
-    color: #006666;
+    color: #188888;
 }
 
 .flex-container{
@@ -175,7 +172,7 @@ pageheader{
     }
 
     body{
-        font-size: 22px;
+        font-size: 20px;
     }
 
     h2.title{
@@ -194,8 +191,8 @@ pageheader{
 
 /* ACCORDION CSS SOURCED FROM https://www.w3schools.com/howto/howto_js_accordion.asp */
 .accordion {
-    background-color:peachpuff;
-    color: grey;
+    background-color:#fff5e9;
+    color: 4A4A4A;
     font-size: 18px;
     cursor: pointer;
     padding: 18px;
@@ -206,8 +203,8 @@ pageheader{
   }
   
 .active, .accordion:hover {
-    background-color: coral;
-    color: white;
+    background-color: peachpuff;
+    color: 4A4A4A;
   }
   
 .panel {
@@ -220,7 +217,7 @@ pageheader{
 /* Styling Footer */
 footer{
     font-size: 14px;
-    color: coral;
+    color: #006666;
     text-align: center;
     margin-top: 100px;
 }
