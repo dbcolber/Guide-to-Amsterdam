@@ -4,18 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+    <link rel="stylesheet" type="text/css" href="css/slideshow.css">
     <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+    <script src="js/toggle.js"></script>
     <title>Contact</title>
 </head>
+
+<a class="skip-main" href="#main">Skip to main content</a>
 
 <body class="index">
 
         <!--SITE HEADER-->
         
-        <div class="flex-container">
+        <div class="main-container">
         
         <div class="center">
-        
+        <header>
         <h1>
             <a href="index.html">Guide to Amsterdam</a>
         </h1>
@@ -35,21 +40,84 @@
                 </li>
                 
                 <li>
-                    <a href="contact.html">Contact</a>
+                    <a href="contact.html" class="siteheader">Contact</a>
                 </li>
             </ul>
         </nav>
-        
+        </header>
         </div>
         
         <!---->
         
+<main>
+
         <h2 class="title">Contact Me</h2>
 
-If you have any questions about your upcoming trip to Amsterdam, please feel free to reach out! 
+<p id="main" tabindex="-1">
+If you have any questions about your upcoming trip to Amsterdam, please feel free to reach out.
+</p>
+
+<br>
+
+<label>
+
+<input type="checkbox" id="checkbox" onchange="toggleEmail()">
+Click to view contact details.
+
+</label>
+
+<div id="contact-info">
+
+<ul>
+<li>Email: dbcolber@umich.edu</li>
+<li>Cell: 203-536-8629</li>
+<li>Portfolio: <a href="www.daniellecolbert.com">www.daniellecolbert.com</a></li>
+</ul>
+
+</div>
+
 
 <br>
 <br>
-<img src="images/contact.jpg" class="responsive-img" alt="Image of the DHL Delivery Boat in Amsterdam" title="DHL Delivery Boat">
+
+<!--SLIDESHOW HELP SOURCED FROM https://www.w3schools.com/howto/howto_js_slideshow.asp -->
+
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <img src="images/dam1.jpg" alt="Image of colorful buildings on a residential street in Amsterdam Oost" style="width:100%">
+          <div class="text">- The streets of Amsterdam Oost -</div>
+        </div>
+      
+        <div class="mySlides fade">
+          <img src="images/dam2.jpg" alt="An image of a boat sitting on the Amstel Canal in Amsterdam Centraal" style="width:100%">
+          <div class="text">- Views of the Amstel Canal -</div>
+        </div>
+      
+        <div class="mySlides fade">
+          <img src="images/dam3.jpg" alt="Amsterdam canal ice melting in the Spring" style="width:100%">
+          <div class="text">- Ice melting during Dutch Spring -</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="images/dam4.jpg" alt="Vrije University bus stop in Amsterdam Zuid" style="width:100%">
+            <div class="text">- My bus stop at the Vrije University -</div>
+        </div>
+</div>
+</main>
+
+<footer class=flexy>
+        <div>Danielle Colbert</div>
+        <div id="smallflexbox1">-</div>
+        <div>SI339 Final Project</div>
+        <div id="smallflexbox2">-</div>
+        <div>Fall 2018</div>
+    </footer>
+
+</div>
+
+<script src="js/slideshow.js"></script>
 
 </html>
