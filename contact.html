@@ -7,17 +7,20 @@
     <link rel="stylesheet" type="text/css" href="css/default.css">
     <link rel="stylesheet" type="text/css" href="css/slideshow.css">
     <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+    <script src="js/toggle.js"></script>
     <title>Contact</title>
 </head>
+
+<a class="skip-main" href="#main">Skip to main content</a>
 
 <body class="index">
 
         <!--SITE HEADER-->
         
-        <div class="flex-container">
+        <div class="main-container">
         
         <div class="center">
-        
+        <header>
         <h1>
             <a href="index.html">Guide to Amsterdam</a>
         </h1>
@@ -41,14 +44,38 @@
                 </li>
             </ul>
         </nav>
-        
+        </header>
         </div>
         
         <!---->
         
+<main>
+
         <h2 class="title">Contact Me</h2>
 
-If you have any questions about your upcoming trip to Amsterdam, please feel free to reach me at dbcolber@umich.edu.
+<p id="main" tabindex="-1">
+If you have any questions about your upcoming trip to Amsterdam, please feel free to reach out.
+</p>
+
+<br>
+
+<label>
+
+<input type="checkbox" id="checkbox" onchange="toggleEmail()">
+Click to view contact details.
+
+</label>
+
+<div id="contact-info">
+
+<ul>
+<li>Email: dbcolber@umich.edu</li>
+<li>Cell: 203-536-8629</li>
+<li>Portfolio: <a href="www.daniellecolbert.com">www.daniellecolbert.com</a></li>
+</ul>
+
+</div>
+
 
 <br>
 <br>
@@ -79,9 +106,16 @@ If you have any questions about your upcoming trip to Amsterdam, please feel fre
             <div class="text">- My bus stop at the Vrije University -</div>
         </div>
 </div>
-<footer>
-    - Made by Danielle Colbert -
-</footer>
+</main>
+
+<footer class=flexy>
+        <div>Danielle Colbert</div>
+        <div id="smallflexbox1">-</div>
+        <div>SI339 Final Project</div>
+        <div id="smallflexbox2">-</div>
+        <div>Fall 2018</div>
+    </footer>
+
 </div>
 
 <script src="js/slideshow.js"></script>
